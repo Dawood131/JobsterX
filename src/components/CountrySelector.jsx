@@ -1,73 +1,70 @@
-import React from "react";
-import { LuEye } from "react-icons/lu";
-import { FaPenToSquare } from "react-icons/fa6";
-import { PiSealCheckLight } from "react-icons/pi";
+// components/ResumeFormatByCountry.jsx
+import React, { useState } from "react";
+import Select from "react-select";
+import countries from "../data/countries";
 
-export default function ResumeProgress() {
-  const completion = "85";
+const options = countries.map((c) => ({
+  value: c.code,
+  label: (
+    <div className="flex items-center gap-2">
+      <img
+        src={`https://flagcdn.com/24x18/${c.code.toLowerCase()}.png`}
+        alt={c.name}
+        className="w-6 h-4 object-cover"
+      />
+      <span>{c.name}</span>
+    </div>
+  ),
+  name: c.name,
+}));
+
+export default function ResumeFormatByCountry() {
+  const [selectedCountry, setSelectedCountry] = useState(
+    options.find((c) => c.value === "US")
+  );
 
   return (
-    <section className="bg-white rounded-xl shadow-[0_4px_10px_rgba(0,0,0,0.15)] p-4 sm:p-6 md:p-6 mb-6 max-w-[960px] mx-auto">
-      <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
-        <div>
-          <h2 className="text-[20px] font-bold text-[#680eb1] leading-tight">
-            Your Resume Progress
-          </h2>
-          <p className="text-xs sm:text-sm text-gray-600 mt-1">
-            Complete all sections for best ATS compatibility
+    <section className="bg-white rounded-xl shadow-[0_4px_10px_rgba(0,0,0,0.15)] p-6 mb-6 max-w-[960px] mx-auto">
+      <div className="flex flex-col md:flex-row gap-6">
+        <div className="w-full md:w-2/5 flex flex-col gap-2">
+          <h2 className="text-[20px] font-bold text-[#680eb1]">Resume Format by Country</h2>
+          <p className="text-gray-600 w-full text-xs">
+            Choose the target country to preview resume format and localization notes
           </p>
-        </div>
-
-        <div className="flex flex-wrap justify-center gap-2 mt-2 sm:mt-0">
-          <button className="text-xs sm:text-sm px-3 py-2 flex justify-center items-center gap-1 bg-[#765bec] text-white rounded hover:bg-[#765bece0] transition w-[45%] sm:w-auto">
-            <LuEye />
-            Preview Resume
-          </button>
-          <button className="text-xs sm:text-sm px-3 py-2 flex justify-center items-center gap-1 bg-[#680eb1] text-white rounded hover:bg-[#5a1bc0] transition w-[45%] sm:w-auto">
-            <FaPenToSquare />
-            Generate Resume
-          </button>
-        </div>
-      </div>
-
-      <div className="mt-5">
-        <div className="flex items-center justify-between text-xs sm:text-sm text-[#5a1bc0]">
-          <div>Completion: {completion}%</div>
-        </div>
-
-        <div className="mt-5 bg-gray-200 rounded-full h-2 overflow-hidden">
-          <div
-            className="h-2 bg-[#680eb1] rounded-full transition-all duration-500 ease-in-out"
-            style={{ width: `${completion}%` }}
+          <h5 className="font-bold text-gray-800 text-[13px] mt-2">Target Country/Region</h5>
+          <Select
+            options={options}
+            value={selectedCountry}
+            onChange={(option) => setSelectedCountry(option)}
+            className="basic-single mt-1"
+            classNamePrefix="select"
+            isSearchable
+            menuPlacement="auto"
+            menuPosition="fixed"
           />
         </div>
 
-        <div className="mt-4 grid grid-cols-2 sm:grid-cols-3 gap-3 text-xs sm:text-sm">
-          <div className="flex items-center gap-2 font-bold text-[#680eb1]">
-            <PiSealCheckLight className="text-xl" />
-            Personal Info
-          </div>
-          <div className="flex items-center gap-2 font-bold text-[#680eb1]">
-            <PiSealCheckLight className="text-xl" />
-            Experience
-          </div>
-          <div className="flex items-center gap-2 font-bold text-[#680eb1]">
-            <PiSealCheckLight className="text-xl" />
-            Education
-          </div>
-          <div className="flex items-center gap-2 font-bold text-[#680eb1]">
-            <PiSealCheckLight className="text-xl" />
-            Skills
-          </div>
-          <div className="flex items-center gap-2 font-bold text-[#680eb1]">
-            <PiSealCheckLight className="text-xl" />
-            Projects
-          </div>
-          <div className="flex items-center gap-2 font-bold text-[#680eb1]">
-            <PiSealCheckLight className="text-xl" />
-            Certificates
-          </div>
+        <div className="w-full md:w-1/4 mt-4 md:mt-0 text-xs flex-shrink-0">
+          <h3 className="font-semibold text-gray-800 mb-2">Format Guidelines</h3>
+          <ul className="text-gray-700 gap-y-1 flex flex-col">
+            <li><b>Max Pages:</b> 2</li>
+            <li><b>Photo Required:</b> No</li>
+            <li><b>Personal Details:</b> Not needed</li>
+            <li><b>Date Format:</b> MM/DD/YYYY</li>
+          </ul>
         </div>
+      </div>
+
+      <div className="w-full border-purple-200 border p-4 rounded-md mt-4">
+        <h3 className="font-semibold text-[#680eb1] text-[15px] mb-2">
+          Cultural Notes for {selectedCountry.name}
+        </h3>
+        <ul className="list-disc list-inside text-gray-700 text-[13px]">
+          <li>Example note for {selectedCountry.name}</li>
+          <li>Keep resume concise and professional</li>
+          <li>Use local date format if needed</li>
+          <li>Keep it 1-2 pages maximum</li>
+        </ul>
       </div>
     </section>
   );
