@@ -9,9 +9,7 @@ const Page1 = () => {
     return (
         <div className="flex min-h-screen">
             {/* Sidebar */}
-            <div className="hidden lg:block w-[260px] bg-gray-50 ">
-                {/* Sidebar content */}
-            </div>
+            <div className="hidden lg:block w-[260px]"></div>
 
             {/* Main Content */}
             <div className="flex-1 p-4 sm:p-6 md:p-8">

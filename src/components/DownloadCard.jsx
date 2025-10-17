@@ -1,14 +1,13 @@
-// DownloadCard.jsx
 import React from 'react';
 import { IoDocumentTextOutline } from "react-icons/io5";
 
 const DownloadCard = () => {
   const downloads = [
-    { name: "IT Resume", file: "public/sample.webp" },
-    { name: "IT Resume", file: "public/download (1).jpg" },
-    { name: "IT Resume", file: "public/sample.jpg" },
-    { name: "IT Resume", file: "public/download.jpg" },
-    { name: "IT Resume", file: "public/sample.jpg" },
+    { name: "IT Resume", file: "/sample.webp" },
+    { name: "IT Resume", file: "/download (1).jpg" },
+    { name: "IT Resume", file: "/sample.jpg" },
+    { name: "IT Resume", file: "/download.jpg" },
+    { name: "IT Resume", file: "/sample.jpg" },
   ];
 
   return (
@@ -29,7 +28,7 @@ const DownloadCard = () => {
           >
             <IoDocumentTextOutline className="text-5xl sm:text-6xl text-purple-900" />
             <h6 className='text-gray-700 mt-1 text-center'>{item.name}</h6>
-            <a href={item.file} download={item.file} className='text-red-500 font-semibold text-xs mt-1'>
+            <a href={item.file} download className='text-red-500 font-semibold text-xs mt-1'>
               Download
             </a>
           </div>
