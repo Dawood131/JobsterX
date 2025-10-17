@@ -59,7 +59,7 @@ export default function ResumeFormatByCountry() {
         <h3 className="font-semibold text-[#680eb1] text-[15px] mb-2">
           Cultural Notes for {selectedCountry.name}
         </h3>
-        <ul className="list-disc list-inside text-gray-700 text-[13px]">
+        <ul className="list-disc list-inside text-gray-700 text-[12px]">
           <li>Example note for {selectedCountry.name}</li>
           <li>Keep resume concise and professional</li>
           <li>Use local date format if needed</li>
