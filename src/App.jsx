@@ -1,11 +1,15 @@
-// App.jsx
 import React from "react";
+import { Routes, Route } from "react-router-dom";
+
+import Layout from "./components/Layout";
 import Page1 from "./Pages/Page1";
 
 export default function App() {
   return (
-    <div className="font-sans bg-gray-50 overflow-x-hidden">
-      <Page1 />
-    </div>
+    <Layout>
+      <Routes>
+        <Route path="/" element={<Page1 />} />
+      </Routes>
+    </Layout>
   );
 }

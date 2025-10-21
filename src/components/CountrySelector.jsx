@@ -1,4 +1,3 @@
-// components/ResumeFormatByCountry.jsx
 import React, { useState } from "react";
 import Select from "react-select";
 import countries from "../data/countries";
