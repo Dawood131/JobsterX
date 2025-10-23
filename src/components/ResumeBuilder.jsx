@@ -4,7 +4,7 @@ import React from "react";
 export default function ResumeBuilder({ onOpenModal }) {
   return (
     <div className="max-w-[960px] mx-auto">
-      <div className="flex-1 flex flex-col p-4 sm:p-6 md:p-8 md:mt-0 mt-6">
+      <div className="flex-1 flex flex-col p-4 sm:p-6 md:p-8 md:-mt-12 mt-6">
         <header>
           <div className="w-full">
             <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-3">

@@ -30,7 +30,7 @@ export default function Modal({ isOpen, onClose }) {
           <div className="relative bg-white rounded-2xl shadow-lg w-[90%] sm:w-[75%] md:w-[51%] p-5 sm:p-7 md:p-8 z-10 border border-gray-200 overflow-y-auto max-h-[90vh]">
             <button
               onClick={onClose}
-              className="absolute top-3 right-4 text-gray-500 hover:text-gray-800 text-xl font-bold"
+              className="absolute top-2 right-4 text-gray-500 hover:text-gray-800 text-xl font-bold"
               aria-label="Close Modal"
             >
               ×
