@@ -1,12 +1,11 @@
 // pages/Page1.jsx
-import React, { useState } from 'react'
-import ResumeBuilder from '../components/ResumeBuilder'
-import YourProgress from '../components/YourProgress'
-import CountrySelector from '../components/CountrySelector'
-import DownloadCard from '../components/DownloadCard'
-import ATS from '../components/ATS'
-import Modal from '../components/Model'
-import ResumeJDScore from './ResumeJDScore'
+import React, { useState } from 'react';
+import ResumeBuilder from '../components/ResumeBuilder';
+import YourProgress from '../components/YourProgress';
+import CountrySelector from '../components/CountrySelector';
+import DownloadCard from '../components/DownloadCard';
+import ATS from '../components/ATS';
+import Modal from '../components/Modal'; // ✅ Corrected import
 
 const Page1 = () => {
     const [modalOpen, setModalOpen] = useState(false);
@@ -23,11 +22,9 @@ const Page1 = () => {
             </div>
 
             {/* Modal */}
-            <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)}>
-                <ResumeJDScore />
-            </Modal>
+            <Modal isOpen={modalOpen} onClose={() => setModalOpen(false)} />
         </div>
-    )
-}
+    );
+};
 
-export default Page1
+export default Page1;

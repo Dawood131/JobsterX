@@ -17,13 +17,12 @@ export default function ResumeProgress() {
             Complete all sections for best ATS compatibility
           </p>
         </div>
-
-        <div className="flex flex-wrap justify-center gap-2 mt-2 sm:mt-0">
-          <button className="text-xs sm:text-sm px-3 py-2 flex justify-center items-center gap-1 bg-[#765bec] text-white rounded hover:bg-[#765bece0] transition w-[45%] sm:w-auto">
+        <div className="flex flex-col sm:flex-row justify-center sm:justify-start gap-2 mt-2">
+          <button className="text-xs sm:text-sm px-3 py-2 flex justify-center items-center gap-1 bg-[#765bec] text-white rounded hover:bg-[#765bece0] transition w-full sm:w-auto">
             <LuEye />
             Preview Resume
           </button>
-          <button className="text-xs sm:text-sm px-3 py-2 flex justify-center items-center gap-1 bg-[#680eb1] text-white rounded hover:bg-[#5a1bc0] transition w-[45%] sm:w-auto">
+          <button className="text-xs sm:text-sm px-3 py-2 flex justify-center items-center gap-1 bg-[#680eb1] text-white rounded hover:bg-[#5a1bc0] transition w-full sm:w-auto">
             <FaPenToSquare />
             Generate Resume
           </button>
