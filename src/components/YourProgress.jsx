@@ -2,15 +2,17 @@ import React from "react";
 import { LuEye } from "react-icons/lu";
 import { FaPenToSquare } from "react-icons/fa6";
 import { PiSealCheckLight } from "react-icons/pi";
+import { useNavigate } from "react-router-dom";
 
 export default function ResumeProgress() {
   const completion = "85";
+  const navigate = useNavigate();
 
   return (
     <section className="bg-white rounded-xl shadow-[0_4px_10px_rgba(0,0,0,0.15)] p-4 sm:p-6 md:p-6 mb-6 max-w-[960px] mx-auto">
       <div className="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-3">
         <div>
-          <h2 className="text-[20px] font-bold text-[#680eb1] leading-tight">
+          <h2 className="text-[22px] font-bold text-[#3A0CA3] leading-tight">
             Your Resume Progress
           </h2>
           <p className="text-xs sm:text-sm text-gray-600 mt-1">
@@ -18,11 +20,13 @@ export default function ResumeProgress() {
           </p>
         </div>
         <div className="flex flex-col sm:flex-row justify-center sm:justify-start gap-2 mt-2">
-          <button className="text-xs sm:text-sm px-3 py-2 flex justify-center items-center gap-1 bg-[#765bec] text-white rounded hover:bg-[#765bece0] transition w-full sm:w-auto">
+          <button
+            onClick={() => navigate("/resume-preview")}
+            className="text-xs sm:text-sm px-3 py-2 flex justify-center items-center gap-1 bg-[#4361EE] text-white rounded hover:bg-[#445fd4] transition w-full sm:w-auto cursor-pointer">
             <LuEye />
             Preview Resume
           </button>
-          <button className="text-xs sm:text-sm px-3 py-2 flex justify-center items-center gap-1 bg-[#680eb1] text-white rounded hover:bg-[#5a1bc0] transition w-full sm:w-auto">
+          <button className="text-xs sm:text-sm px-3 py-2 flex justify-center items-center gap-1 bg-gradient-to-r from-[#3A0CA3] to-[#7209B7] hover:from-[#6909aa] transition-all duration-300  text-white rounded w-full sm:w-auto cursor-pointer">
             <FaPenToSquare />
             Generate Resume
           </button>
@@ -30,13 +34,13 @@ export default function ResumeProgress() {
       </div>
 
       <div className="mt-5">
-        <div className="flex items-center justify-between text-xs sm:text-sm text-[#5a1bc0]">
+        <div className="flex items-center justify-between text-xs sm:text-sm text-[#3A0CA3]">
           <div>Completion: {completion}%</div>
         </div>
 
         <div className="mt-5 bg-gray-200 rounded-full h-2 overflow-hidden">
           <div
-            className="h-2 bg-[#680eb1] rounded-full transition-all duration-500 ease-in-out"
+            className="h-2 bg-[#3A0CA3] rounded-full transition-all duration-500 ease-in-out"
             style={{ width: `${completion}%` }}
           />
         </div>
@@ -54,7 +58,7 @@ export default function ResumeProgress() {
             <PiSealCheckLight className="text-xl" />
             Education
           </div>
-          <div className="flex items-center gap-2 font-bold text-[#680eb1]">
+          <div className="flex items-center gap-2 font-bold text-[#3A0CA3]">
             <PiSealCheckLight className="text-xl" />
             Skills
           </div>

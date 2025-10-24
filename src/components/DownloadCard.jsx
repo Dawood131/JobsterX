@@ -13,7 +13,7 @@ const DownloadCard = () => {
   return (
     <section className='bg-white rounded-xl shadow-[0_4px_10px_rgba(0,0,0,0.15)] p-4 sm:p-6 md:p-6 mb-6 max-w-[960px] mx-auto'>
       <div>
-        <h2 className="text-[20px] font-bold text-[#680eb1] leading-tight">
+        <h2 className="text-[22px] font-bold text-[#3A0CA3] leading-tight">
           Resume Download History
         </h2>
         <p className='text-gray-600 text-xs sm:text-sm mt-1'>
@@ -26,9 +26,9 @@ const DownloadCard = () => {
             key={index}
             className='flex flex-col items-center justify-center'
           >
-            <IoDocumentTextOutline className="text-5xl sm:text-6xl text-purple-900" />
+            <IoDocumentTextOutline className="text-5xl sm:text-6xl text-[#3A0CA3]" />
             <h6 className='text-gray-700 mt-1 text-center'>{item.name}</h6>
-            <a href={item.file} download className='text-red-500 font-semibold text-xs mt-1'>
+            <a href={item.file} download className='text-[#F72585] font-semibold text-xs mt-1'>
               Download
             </a>
           </div>

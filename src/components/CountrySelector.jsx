@@ -26,11 +26,11 @@ export default function ResumeFormatByCountry() {
     <section className="bg-white rounded-xl shadow-[0_4px_10px_rgba(0,0,0,0.15)] p-6 mb-6 max-w-[960px] mx-auto">
       <div className="flex flex-col md:flex-row gap-6">
         <div className="w-full md:w-2/5 flex flex-col gap-2">
-          <h2 className="text-[20px] font-bold text-[#680eb1]">Resume Format by Country</h2>
+          <h2 className="text-[22px] font-bold text-[#3A0CA3]">Resume Format by Country</h2>
           <p className="text-gray-600 w-full text-xs">
             Choose the target country to preview resume format and localization notes
           </p>
-          <h5 className="font-bold text-gray-800 text-[13px] mt-2">Target Country/Region</h5>
+          <h4 className="font-bold text-gray-800 text-[16px] mt-2">Target Country/Region</h4>
           <Select
             options={options}
             value={selectedCountry}
@@ -55,7 +55,7 @@ export default function ResumeFormatByCountry() {
       </div>
 
       <div className="w-full border-purple-200 border p-4 rounded-md mt-4">
-        <h3 className="font-semibold text-[#680eb1] text-[15px] mb-2">
+        <h3 className="font-semibold text-[#3A0CA3] text-[15px] mb-2">
           Cultural Notes for {selectedCountry.name}
         </h3>
         <ul className="list-disc list-inside text-gray-700 text-[12px]">

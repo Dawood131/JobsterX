@@ -36,10 +36,10 @@ export default function Sidebar({ isOpen, onToggle }) {
           <p className="text-sm text-center text-gray-500">sameer@jobsterx.com</p>
 
           <div className="flex justify-center gap-2 mt-2">
-            <span className="px-3 py-1 text-xs font-semibold bg-[#5d7ad6] text-white rounded-full flex items-center">
+            <span className="px-3 py-1 text-xs font-semibold bg-[#4361EE] hover:bg-[#2046f0] cursor-pointer text-white rounded-full flex items-center">
               Premium
             </span>
-            <span className="px-2 py-1 text-xs border border-gray-300 rounded-full">
+            <span className="px-2 py-1 text-xs border border-gray-300 rounded-full cursor-pointer">
               Level Professional
             </span>
           </div>
@@ -49,20 +49,20 @@ export default function Sidebar({ isOpen, onToggle }) {
           <div>
             <div className="flex justify-between items-center mb-1">
               <p className="text-xs text-gray-800">Profile</p>
-              <span className="text-xs font-semibold text-[#5d7ad6]">85%</span>
+              <span className="text-xs font-semibold text-[#4361EE]">85%</span>
             </div>
             <div className="w-full bg-gray-200 h-2 rounded">
-              <div className="bg-[#680eb1] h-2 rounded" style={{ width: "85%" }} />
+              <div className="bg-gradient-to-r from-[#3A0CA3] to-[#7209B7] h-2 rounded" style={{ width: "85%" }} />
             </div>
           </div>
 
           <div>
             <div className="flex justify-between items-center mb-1">
               <p className="text-xs text-gray-800">Next Level</p>
-              <span className="text-xs font-semibold text-[#5d7ad6]">Expert</span>
+              <span className="text-xs font-semibold text-[#4361EE]">Expert</span>
             </div>
             <div className="w-full bg-gray-200 h-2 rounded">
-              <div className="bg-[#680eb1] h-2 rounded w-2/3" />
+              <div className="bg-gradient-to-r from-[#3A0CA3] to-[#7209B7] h-2 rounded w-2/3" />
             </div>
           </div>
 
@@ -71,7 +71,7 @@ export default function Sidebar({ isOpen, onToggle }) {
             <NavLink
               to="/activity"
               className={({ isActive }) =>
-                `text-xs font-medium hover:underline ${isActive ? "text-white bg-purple-600 px-2 py-1 rounded" : "text-[#680eb1]"
+                `text-xs font-medium hover:underline ${isActive ? "text-white bg-[#3A0CA3] px-2 py-1 rounded" : "text-[#3A0CA3]"
                 }`
               }
             >
@@ -87,7 +87,7 @@ export default function Sidebar({ isOpen, onToggle }) {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `flex items-center gap-2 p-2 rounded-lg ${isActive ? "bg-[#680eb1] text-white" : "hover:bg-purple-200"
+                `flex items-center gap-2 p-2 rounded-lg ${isActive ? "bg-[#3A0CA3] text-white" : "hover:bg-purple-200"
                 }`
               }
             >
@@ -96,7 +96,7 @@ export default function Sidebar({ isOpen, onToggle }) {
           ))}
         </nav>
         <div className="mt-auto pt-4 space-y-2 text-center">
-          <button className="w-full flex justify-between items-center px-4 py-2 bg-[#680eb1] text-white rounded-lg hover:bg-purple-700">
+          <button className="w-full flex justify-between items-center px-4 py-2 bg-[#3A0CA3] text-white rounded-lg hover:bg-[#4209c7]">
             <span className="flex items-center gap-1">
               <PiMedalMilitaryBold /> Streak
             </span>

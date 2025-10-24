@@ -55,7 +55,7 @@ export default function Modal({ isOpen, onClose }) {
                 placeholder="Paste your current resume text here for AI Analysis..."
                 value={text}
                 onChange={(e) => setText(e.target.value)}
-                className="w-full h-36 border border-gray-300 rounded-lg p-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#f472b6] transition"
+                className="w-full h-36 border border-gray-300 rounded-lg p-3 text-sm resize-none focus:outline-none focus:ring-2 focus:ring-[#F72585] transition"
               ></textarea>
 
               {error && (
@@ -64,7 +64,7 @@ export default function Modal({ isOpen, onClose }) {
 
               <button
                 onClick={handleAnalyze}
-                className="w-full px-5 py-2.5 bg-[#f03998] text-white text-sm sm:text-[15px] font-medium rounded-lg hover:bg-[#ec509c] active:scale-[0.98] transition cursor-pointer"
+                className="w-full px-5 py-2.5 bg-[#F72585] text-white text-sm sm:text-[15px] font-medium rounded-lg hover:bg-[#ee107b] active:scale-[0.98] transition cursor-pointer"
               >
                 Analyze with AI
               </button>

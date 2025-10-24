@@ -7,7 +7,7 @@ export default function Header({ onMenuClick }) {
         {/* Hamburger Button - Left */}
         <button
           onClick={onMenuClick}
-          className="text-gray-700 hover:text-purple-600 focus:outline-none focus:ring-2 focus:ring-purple-500 rounded-md text-2xl"
+          className="text-gray-700 hover:text-[#3A0CA3] focus:outline-none focus:ring-2 focus:ring-[#3A0CA3] rounded-md text-2xl"
           aria-label="Toggle sidebar"
         >
           ☰
