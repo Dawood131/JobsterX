@@ -8,8 +8,6 @@ export default function ResumePreview() {
 
   return (
     <div className="flex flex-col items-center px-4 sm:px-6 md:px-10 py-12 sm:py-10 bg-gray-50 min-h-screen font-['Montserrat']">
-
-      {/* ===== Header (Outside Card) ===== */}
       <div className="w-full max-w-[900px] flex flex-col sm:flex-row justify-between items-center sm:items-center mb-6 gap-4">
         <h2 className="text-[#3A0CA3] text-lg sm:text-xl font-semibold">
           Resume Preview
@@ -31,7 +29,7 @@ export default function ResumePreview() {
         </div>
       </div>
 
-      {/* ===== Main Resume Card ===== */}
+      {/*Resume Card*/}
       <div className="w-full max-w-[900px] bg-white shadow-md rounded-xl p-6 sm:p-8 md:p-10 border border-gray-200">
         {/* Name & Contact */}
         <h1 className="text-2xl sm:text-4xl font-bold text-center text-gray-900">
@@ -97,8 +95,6 @@ export default function ResumePreview() {
             JavaScript, Node.js, React, Tailwind CSS
           </p>
         </section>
-
-        {/* Projects */}
         {/* Projects */}
         <section className="mt-8">
           <h3 className="font-bold border-b border-gray-300 pb-1 mb-3 text-gray-800">
@@ -106,7 +102,6 @@ export default function ResumePreview() {
           </h3>
 
           <div className="space-y-5">
-            {/* Project 1 */}
             <div>
               <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center">
                 <p className="font-semibold text-gray-900 text-sm sm:text-base">
@@ -116,7 +111,6 @@ export default function ResumePreview() {
                   2025-01 - 2025-8
                 </p>
               </div>
-
               <p className="text-sm sm:text-[14px] text-gray-700 mt-1">
                 Dummy text
               </p>

@@ -26,7 +26,6 @@ export default function AtsModal({ isOpen, onClose }) {
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center px-3 sm:px-4">
-      {/* Overlay */}
       <div
         className="absolute inset-0 bg-black/50 transition-opacity duration-300"
         onClick={onClose}
@@ -131,23 +130,23 @@ export default function AtsModal({ isOpen, onClose }) {
               <BsSearch className="text-[#3A0CA3]" size={25} />
               Recommended Keywords
             </h3>
-           <div className="flex flex-wrap sm:flex-row flex-col sm:gap-2 gap-2 text-sm sm:text-base">
-  {[
-    "Project Management",
-    "Leadership",
-    "Strategic Planning",
-    "Communication",
-    "Time Management",
-    "Problem Solving",
-  ].map((keyword, i) => (
-    <span
-      key={i}
-      className="w-full sm:w-auto sm:px-3 px-4 py-1 bg-[#eae5fd] border border-[#e3ddff] text-[#3A0CA3] rounded-full text-center font-medium"
-    >
-      {keyword}
-    </span>
-  ))}
-</div>
+            <div className="flex flex-wrap sm:flex-row flex-col sm:gap-2 gap-2 text-sm sm:text-base">
+              {[
+                "Project Management",
+                "Leadership",
+                "Strategic Planning",
+                "Communication",
+                "Time Management",
+                "Problem Solving",
+              ].map((keyword, i) => (
+                <span
+                  key={i}
+                  className="w-full sm:w-auto sm:px-3 px-4 py-1 bg-[#eae5fd] border border-[#e3ddff] text-[#3A0CA3] rounded-full text-center font-medium"
+                >
+                  {keyword}
+                </span>
+              ))}
+            </div>
 
           </div>
         </div>
