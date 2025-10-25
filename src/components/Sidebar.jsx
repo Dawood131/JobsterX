@@ -87,7 +87,7 @@ export default function Sidebar({ isOpen, onToggle }) {
               key={link.to}
               to={link.to}
               className={({ isActive }) =>
-                `flex items-center gap-2 p-2 rounded-lg ${isActive ? "bg-[#3A0CA3] text-white" : "hover:bg-purple-200"
+                `flex items-center gap-2 p-2 rounded-lg ${isActive ? "bg-gradient-to-r from-[#3A0CA3] to-[#7209B7]  text-white" : "hover:bg-purple-200"
                 }`
               }
             >
@@ -96,7 +96,7 @@ export default function Sidebar({ isOpen, onToggle }) {
           ))}
         </nav>
         <div className="mt-auto pt-4 space-y-2 text-center">
-          <button className="w-full flex justify-between items-center px-4 py-2 bg-[#3A0CA3] text-white rounded-lg hover:bg-[#4209c7]">
+          <button className="w-full flex justify-between items-center px-4 py-2 bg-gradient-to-r from-[#3A0CA3] to-[#7209B7] hover:from-[#6909aa]  text-white rounded-lg ">
             <span className="flex items-center gap-1">
               <PiMedalMilitaryBold /> Streak
             </span>
