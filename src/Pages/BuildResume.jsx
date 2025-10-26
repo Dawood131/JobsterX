@@ -5,13 +5,13 @@ import YourProgress from '../components/YourProgress';
 import CountrySelector from '../components/CountrySelector';
 import DownloadCard from '../components/DownloadCard';
 import ATS from '../components/ATS';
-import Modal from '../components/Modal'; // ✅ Corrected import
+import Modal from '../components/Modal'; 
 
 const Page1 = () => {
     const [modalOpen, setModalOpen] = useState(false);
 
     return (
-        <div className="flex min-h-screen">
+        <div className="flex min-h-screen ">
             {/* Main Content */}
             <div className="flex-1 p-4 sm:p-6 md:p-8">
                 <ResumeBuilder onOpenModal={() => setModalOpen(true)} />

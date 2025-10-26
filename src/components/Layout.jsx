@@ -7,7 +7,7 @@ export default function AppLayout({ children }) {
   const [sidebarOpen, setSidebarOpen] = useState(false);
 
   return (
-    <div className="flex min-h-screen bg-gray-50">
+    <div className="flex min-h-screen">
       {/* Sidebar */}
       <Sidebar
         isOpen={sidebarOpen}
@@ -20,7 +20,7 @@ export default function AppLayout({ children }) {
         <Header onMenuClick={() => setSidebarOpen(!sidebarOpen)} />
 
         {/* Page Content */}
-        <main className="flex-1 p-6">{children}</main>
+        <main className="flex-1 p-6 bg-">{children}</main>
       </div>
     </div>
   );
