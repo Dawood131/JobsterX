@@ -61,23 +61,23 @@ export default function ChangePassword() {
   };
 
   return (
-    <div className="min-h-screen flex flex-col items-center px-4 sm:px-6 md:px-8 md:mt-0 mt-12">
+    <div className="min-h-screen flex flex-col items-center px-4 sm:px-6 md:px-8 md:mt-0 mt-12 ">
       {/* Heading */}
       <div className="w-full max-w-4xl text-center mb-2">
-        <h1 className="text-2xl sm:text-3xl font-bold text-gray-800">
+        <h1 className="text-[25.59px] font-bold text-gray-800">
           Change Password
         </h1>
-        <p className="text-gray-800 text-xs sm:text-sm mt-1">
+        <p className="text-black font-normal text-[15.35px] mt-1">
           Update your password to keep your account secure
         </p>
       </div>
 
       {/* Password Security Tips Box */}
       <div className="bg-white w-full max-w-4xl rounded-xl p-4 sm:p-6 md:p-6 mb-6 mt-1 shadow-md">
-        <h3 className="text-lg sm:text-[21px] font-bold text-black mb-4 sm:mb-6 flex items-center gap-x-4 sm:gap-x-6">
+        <h3 className="text-[20px] font-bold text-black mb-4 sm:mb-6 flex items-center gap-x-4 sm:gap-x-6">
           <BsShieldLock size={24} className="text-[#3A0CA3]" /> Password Security Tips
         </h3>
-        <ul className="list-disc list-inside text-[#4361EE] space-y-1 sm:space-y-2 ml-6 sm:ml-20 text-[10px] sm:text-sm">
+        <ul className="list-disc list-inside text-[#4361EE] space-y-1 sm:space-y-2 ml-6 sm:ml-20 text-[10px] sm:text-[14px] font-medium">
           <li>Use at least 8 characters</li>
           <li>Include uppercase and lowercase letters</li>
           <li>Add numbers and special characters</li>
@@ -89,8 +89,8 @@ export default function ChangePassword() {
       <div className="bg-white w-full max-w-4xl p-4 sm:p-8 rounded-xl shadow-md space-y-6">
         {/* Heading inside form */}
         <div className="mb-4 sm:mb-6">
-          <h2 className="text-lg sm:text-[21px] font-bold text-black">Update Password</h2>
-          <p className="text-gray-600 text-xs sm:text-sm mt-1">
+          <h2 className="text-lg sm:text-[20px] font-bold text-black">Update Password</h2>
+          <p className="text-gray-600 text-xs sm:text-[12px] mt-1 font-medium">
             Enter your current password and choose a new one
           </p>
         </div>
@@ -98,7 +98,7 @@ export default function ChangePassword() {
         <form onSubmit={handleUpdate} className="space-y-4 sm:space-y-6">
           {/* Current Password */}
           <div className="relative w-full">
-            <label className="block text-black text-xs sm:text-sm font-semibold mb-1 tracking-normal">
+            <label className="block text-black text-xs sm:text-[16px] font-semibold mb-1 tracking-normal">
               Current Password
             </label>
             <input
@@ -111,15 +111,15 @@ export default function ChangePassword() {
             <button
               type="button"
               onClick={() => setShowCurrent(!showCurrent)}
-              className="absolute inset-y-0 right-3 flex items-center text-gray-500 mt-5"
+              className="absolute inset-y-0 right-3 flex items-center text-gray-500 mt-6"
             >
-              {showCurrent ? <EyeOff size={20} /> : <Eye size={20} />}
+              {showCurrent ? <EyeOff size={22} /> : <Eye size={22} />}
             </button>
           </div>
 
           {/* New Password */}
           <div className="relative w-full">
-            <label className="block text-black text-xs sm:text-sm font-semibold mb-1 tracking-normal">
+            <label className="block text-black text-xs sm:text-[16px] font-semibold mb-1 tracking-normal">
               New Password
             </label>
             <input
@@ -134,7 +134,7 @@ export default function ChangePassword() {
               onClick={() => setShowNew(!showNew)}
               className="absolute inset-y-0 right-3 flex items-center text-gray-500 mt-5"
             >
-              {showNew ? <EyeOff size={20} /> : <Eye size={20} />}
+              {showNew ? <EyeOff size={22} /> : <Eye size={22} />}
             </button>
             {errors.newPassword && (
               <p className="text-red-600 text-xs mt-1">{errors.newPassword}</p>
@@ -143,7 +143,7 @@ export default function ChangePassword() {
 
           {/* Confirm Password */}
           <div className="relative w-full">
-            <label className="block text-black text-xs sm:text-sm font-semibold mb-1 tracking-normal">
+            <label className="block text-black text-xs sm:text-[16px] font-semibold mb-1 tracking-normal">
               Confirm New Password
             </label>
             <input
@@ -158,7 +158,7 @@ export default function ChangePassword() {
               onClick={() => setShowConfirm(!showConfirm)}
               className="absolute inset-y-0 right-3 flex items-center text-gray-500 mt-5"
             >
-              {showConfirm ? <EyeOff size={20} /> : <Eye size={20} />}
+              {showConfirm ? <EyeOff size={22} /> : <Eye size={22} />}
             </button>
             {errors.confirmPassword && (
               <p className="text-red-600 text-xs mt-1">{errors.confirmPassword}</p>
@@ -167,7 +167,7 @@ export default function ChangePassword() {
 
           {/* Update Password Button */}
           <div className="flex justify-center">
-            <button className="px-4 sm:px-6 py-2 sm:py-2 text-sm sm:text-base mt-2 -mb-2 bg-[#F72585] hover:bg-[#f72584e0] text-white font-normal rounded-lg transition-all duration-300">
+            <button className="px-4 sm:px-8 py-2 sm:py-2 text-sm sm:text-[16px] mt-2 -mb-2 bg-[#F72585] hover:bg-[#f72584e0] text-white font-semibold rounded-lg transition-all duration-300">
               Update Password
             </button>
           </div>
