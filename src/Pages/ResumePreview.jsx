@@ -7,22 +7,19 @@ export default function ResumePreview() {
   const navigate = useNavigate();
 
   return (
-    <div className="flex flex-col items-center px-4 sm:px-6 md:px-10 py-12 sm:py-10 bg-gray-50 min-h-screen font-['Montserrat']">
+    <div className="flex flex-col items-center px-4 sm:px-6 md:px-10 py-12 sm:py-10 min-h-screen font-['Montserrat']">
       <div className="w-full max-w-[900px] flex flex-col sm:flex-row justify-between items-center sm:items-center mb-6 gap-4">
         <h2 className="text-[#3A0CA3] text-lg sm:text-xl font-semibold">
           Resume Preview
         </h2>
-
         <div className="flex flex-wrap gap-3">
           <button className="flex items-center justify-center gap-2 px-4 py-2 text-xs sm:text-sm font-medium text-white rounded-lg bg-[#F72585] hover:bg-[#d62373] transition-all duration-300">
             <FaPenToSquare size={16} />
             Edit Resume
           </button>
-
           <button
             onClick={() => navigate(-1)}
-            className="flex items-center justify-center gap-2 px-4 py-2 text-xs sm:text-sm font-medium text-white bg-[#5B5B5B] rounded-lg hover:bg-[#2b2a2a] transition-all duration-300"
-          >
+            className="flex items-center justify-center gap-2 px-4 py-2 text-xs sm:text-sm font-medium text-white bg-[#5B5B5B] rounded-lg hover:bg-[#2b2a2a] transition-all duration-300">
             <IoClose size={18} />
             Close Preview
           </button>
