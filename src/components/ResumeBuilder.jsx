@@ -16,7 +16,7 @@ export default function ResumeBuilder({ onOpenModal }) {
 
         <button
           onClick={onOpenModal}
-          className="mt-4 md:mt-0 px-4 sm:px-6 py-2 sm:py-2.5 text-sm sm:text-[14px] rounded-xl bg-gradient-to-r from-[#3A0CA3] to-[#7209B7] hover:from-[#6909aa] transition-all duration-300 text-white font-medium w-full sm:w-auto md:w-auto"
+          className="mt-4 md:mt-0 px-4 sm:px-6 py-2 sm:py-2.5 text-sm sm:text-[14px] rounded-xl bg-gradient-to-r from-[#3A0CA3] to-[#7209B7] hover:from-[#6909aa] transition-all duration-300 text-white font-medium w-full sm:w-auto md:w-auto cursor-pointer"
         >
           Get Your Resume JD Score
         </button>
