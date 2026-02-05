@@ -30,11 +30,11 @@ export default function ResumePreview() {
       <div className="w-full max-w-[900px] bg-white shadow-md rounded-xl p-6 sm:p-8 md:p-10 border border-gray-200">
         {/* Name & Contact */}
         <h1 className="text-2xl sm:text-4xl font-bold text-center text-gray-900">
-          Sameer Saleem
+          Dawood Butt
         </h1>
         <p className="text-center text-gray-800 mt-2 text-sm sm:text-[17px] font-semibold">
-          +971 1234567 - Dubai <br />
-          <span>sameersaleem/in/linkedin</span> - jobsterx.com
+          +92 3084161568 - Lahore <br />
+          <span>dawoodbutt/in/linkedin</span> 
         </p>
 
         {/* Professional Summary */}

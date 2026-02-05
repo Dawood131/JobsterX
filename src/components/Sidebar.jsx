@@ -7,12 +7,10 @@ import { FaCamera, FaTrashAlt, FaUpload } from "react-icons/fa";
 import { BsPersonFill } from "react-icons/bs";
 
 const menuLinks = [
-  { to: "/", label: "Build your Resume" },
   { to: "/yourprofile", label: "Your Profile" },
+  { to: "/", label: "Build your Resume" },
   { to: "/changepass", label: "Change Password" },
   { to: "/subscription", label: "Subscription" },
-  { to: "/sec", label: "Lorem Ipsum" },
-  { to: "/oj", label: "Lorem Ipsum" },
 ];
 
 export default function Sidebar({ isOpen, onToggle }) {
@@ -40,6 +38,28 @@ export default function Sidebar({ isOpen, onToggle }) {
     return () => document.removeEventListener("mousedown", handleClickOutside);
   }, [showOverlay]);
 
+  //  API  
+  const uploadProfileImage = async (file) => {
+    const formData = new FormData();
+    formData.append("profileImage", file);
+
+    try {
+      const response = await fetch("https://dev-portalapi.jobsterx.com/api/users/profile/image", {
+        method: "POST",
+        body: formData,
+        // headers: { "Authorization": `Bearer ${token}` }
+      });
+      const data = await response.json();
+      if (response.ok) {
+        console.log("Image uploaded successfully:", data);
+      } else {
+        console.error("Upload failed:", data);
+      }
+    } catch (error) {
+      console.error("Error uploading image:", error);
+    }
+  };
+ 
   const handleFileChange = (e) => {
     const file = e.target.files[0];
     if (!file) return;
@@ -48,12 +68,16 @@ export default function Sidebar({ isOpen, onToggle }) {
       alert("Only PNG or JPG allowed");
       return;
     }
+
     const reader = new FileReader();
     reader.onload = () => {
       const dataUrl = reader.result;
       setImage(dataUrl);
       localStorage.setItem("profileImage", dataUrl);
       setShowOverlay(false);
+
+      // Upload to API
+      uploadProfileImage(file);
     };
     reader.readAsDataURL(file);
   };
@@ -86,6 +110,14 @@ export default function Sidebar({ isOpen, onToggle }) {
     localStorage.setItem("profileImage", dataUrl);
     stopCamera();
     setShowOverlay(false);
+
+    // Convert dataURL to file and upload
+    fetch(dataUrl)
+      .then(res => res.blob())
+      .then(blob => {
+        const file = new File([blob], "profile.png", { type: "image/png" });
+        uploadProfileImage(file);
+      });
   };
 
   const stopCamera = () => {
@@ -109,7 +141,7 @@ export default function Sidebar({ isOpen, onToggle }) {
         {/* Header */}
         <div className="flex items-center justify-between p-4 bg-white flex-shrink-0">
           <div className="flex items-center space-x-2">
-            <img src="/logo.png" alt="Logo" className="h-6 w-auto object-contain" />
+            <img src="/logo.png" alt="Logo" className="h-8 w-auto object-contain" />
           </div>
           <button
             onClick={onToggle}
@@ -149,8 +181,8 @@ export default function Sidebar({ isOpen, onToggle }) {
             </div>
 
             {/* Name */}
-            <h2 className="text-xl font-bold mt-2">Sameer Saleem</h2>
-            <p className="text-sm text-gray-500">sameer@jobsterx.com</p>
+            <h2 className="text-xl font-bold mt-2">Dawood Butt</h2>
+            <p className="text-sm text-gray-500">buttdaud94@gmail.com</p>
 
             {/* Premium / Level */}
             <div className="flex justify-center gap-2 mt-2">
