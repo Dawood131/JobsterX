@@ -7,8 +7,8 @@ import { FaCamera, FaTrashAlt, FaUpload } from "react-icons/fa";
 import { BsPersonFill } from "react-icons/bs";
 
 const menuLinks = [
-  { to: "/yourprofile", label: "Your Profile" },
   { to: "/", label: "Build your Resume" },
+  { to: "/yourprofile", label: "Your Profile" },
   { to: "/changepass", label: "Change Password" },
   { to: "/subscription", label: "Subscription" },
 ];
